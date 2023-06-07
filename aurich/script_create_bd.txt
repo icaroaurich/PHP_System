@@ -1,0 +1,30 @@
+create database icaro;
+use icaro;
+create table usuarios(
+	ID int primary key auto_increment,
+	NOME VARCHAR(15),
+	SENHA VARCHAR(15)
+);
+create table produtos(
+	ID int primary key auto_increment,
+	NOME VARCHAR(15),
+	PRECO INT(5)
+);
+create table clientes(
+	ID int primary key auto_increment,
+	NOME VARCHAR(15),
+	CPF BIGINT(12)
+);
+create table orcamentos(
+	ID int primary key auto_increment,
+	id_Cliente int (6)
+);
+create table orc_pro(
+	ID int primary key auto_increment,
+	id_prod int (6),
+	id_orc int(6),
+	prod_preco int (6),
+	QUANTIDADE int (3)
+);
+insert into usuarios (nome,senha) values ('icaro','adm');
+;
